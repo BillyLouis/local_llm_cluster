@@ -38,7 +38,7 @@ For LLM Distributed inference over the network.
 
 # Hardware implementation & configuration
 - Internal Router ASUS RT-AX1800S configuration:
-  - [x] Change default getway from 192.168.x.x to enterprise IP 10.xx.xx.xx
+  - [x] Change default getaway from 192.168.x.x to enterprise IP 10.xx.xx.xx
   - [x] Enable DHCP and VPN connection
 
 - ISR Router configuration:
