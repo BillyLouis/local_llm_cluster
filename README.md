@@ -18,7 +18,7 @@ For LLM Distributed inference over the network.
   - 8 QSFP40GPC05M MSA Compliant QSFP+ Direct-Attach Twinax Cable - 0.5 m (1.6 ft) - 40 GbE
 - [x] AMP up Powerlines:
   - [x] Install Subpanel in Garage
-  - [x] Run 20 AWG wires from Subpannel to Home Office
+  - [x] Run 20 AWG wires from Subpanel to Home Office
   - [x] Powerup all components: 4 outlets with 20 AMP each
      
 ## CONGIGURATION:
