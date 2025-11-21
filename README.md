@@ -38,22 +38,17 @@ For LLM Distributed inference over the network.
 
 # Hardware implementation & configuration
 - Internal Router ASUS RT-AX1800S configuration:
-```shell
-- [x] Change default getway from 192.168.x.x to enterprise IP 10.xx.xx.xx
-- [x] Enable DHCP and VPN connection
-```
+  - [x] Change default getway from 192.168.x.x to enterprise IP 10.xx.xx.xx
+  - [x] Enable DHCP and VPN connection
 
 - ISR Router configuration:
-```shell
-- [x] Update software and licenses
-- [ ] Configure out port for QSFP 40Gbps connection  & internet connection (routing) to Cisco Switch
-```
+  - [x] Update software and licenses
+  - [ ] Configure out port for QSFP 40Gbps connection  & internet connection (routing) to Cisco Switch
+
 
 - CISCO NEXUS 3172PQ configuration:
-```shell
-- [x] Update software and licenses
-- [ ] Configure 4 QSFP ports & Routing for the computers
-```
+  - [x] Update software and licenses
+  - [ ] Configure 4 QSFP ports & Routing for the computers
 
 💠 Working progress ...
 
