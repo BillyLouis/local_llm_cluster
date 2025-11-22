@@ -21,8 +21,8 @@ For LLM Distributed inference over the network.
   - [x] Run 20 AWG wires from Subpanel to Home Office
   - [x] Powerup all components: 4 outlets with 20 AMP each
      
-## CONGIGURATION:
-# Software implementation & configuration
+# CONGIGURATION:
+## Software implementation & configuration
 - [x] Install Ubuntu 22.04 on each machine
 - [x] Downloand and configure Drivers for the Mellanox ConnectX-3 cards
 - [ ] Establish network connection between all PCs at 40Gbps & enable routing for internet connection  
@@ -36,7 +36,7 @@ For LLM Distributed inference over the network.
 - [ ] Run LLM distributed Inference over the network on all machine **ACTING** as one PC 
 
 
-# Hardware implementation & configuration
+## Hardware implementation & configuration
 - Internal Router ASUS RT-AX1800S configuration:
   - [x] Change default getaway from 192.168.x.x to enterprise IP 10.xx.xx.xx
   - [x] Enable DHCP and VPN connection
