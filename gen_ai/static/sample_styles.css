@@ -1,0 +1,29 @@
+/* General body styling for layout */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Viewport height ensures full page display */
+    margin: 0; /* Remove default body margin */
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Styling for the main content container */
+.container {
+    /* All padding and design applied here: */
+    padding: 40px; /* Increased padding for better visual spacing */
+    background-color: white; /* White background for contrast */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-align: center; /* Center the text within the container */
+    max-width: 500px; /* Ensure container doesn't get too wide on large screens */
+    width: 90%; /* Responsive width */
+}
+
+/* Styling for the main heading */
+h1 {
+    color: #333; /* Dark gray text color */
+    margin: 0; /* Remove default margin from the H1 */
+    font-size: 1.5em; /* Standard readable font size */
+}

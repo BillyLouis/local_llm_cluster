@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go LLM Inference (3 Columns)</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="main-layout-container">
+        
+        <!-- Column 1: Request History/Titles -->
+        <div class="column left-column">
+            <h2>Requests</h2>
+            <button class="clear-btn" onclick="window.location.href='/'">Clear History</button>
+            <ul class="request-list">
+                {{if .PromptTitle}}
+                <!-- Use the new truncate function here -->
+                <li><strong>{{.PromptTitle | truncate 6}}</strong></li>
+                {{else}}
+                <li>No history yet.</li>
+                {{end}}
+            </ul>
+        </div>
+
+        <!-- Column 2: Input and Controls (Middle) -->
+        <div class="column center-column">
+            <!-- Dynamically display the LLM Name -->
+            <h1>Ask the LLM ({{.LLMName}})</h1>
+            
+            <!-- This form now contains both the ask and the reset button -->
+            <form action="/ask" method="POST" class="prompt-form" id="promptForm">
+                <textarea name="prompt" rows="10" placeholder="Enter your prompt here..." required>{{.PromptTitle}}</textarea>
+                
+                <div class="button-group">
+                    <button type="submit">Ask LLM</button>
+                    <!-- Standard HTML Reset button clears the form inputs -->
+                    <button type="reset" class="secondary-btn">Clear Prompt</button>
+                </div>
+            </form>
+
+            {{if .Error}}
+                <p class="error">{{.Error}}</p>
+            {{end}}
+        </div>
+
+        <!-- Column 3: Response Area (Right) -->
+        <div class="column right-column">
+            <h2>Response</h2>
+            <!-- This clear button redirects the whole page to effectively "clear" the response -->
+             <button class="clear-btn" onclick="window.location.href='/'">Clear Response</button>
+            <div class="response-area">
+                {{if .Response}}
+                    <pre>{{.Response}}</pre>
+                {{else}}
+                    <p>AI response will appear here...</p>
+                {{end}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

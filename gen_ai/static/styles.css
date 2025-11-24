@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Main container is a flex container with default 'flex-direction: row' */
+.main-layout-container {
+    display: flex;
+    width: 95vw;
+    height: 90vh; /* Fixed height for consistent columns */
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+.column {
+    padding: 20px;
+    /* Ensure content inside columns can scroll vertically if needed */
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column; /* Stack contents vertically within each column */
+}
+
+/* Sizing the columns specifically */
+.left-column {
+    flex: 1; /* Takes 1 part of space, e.g., ~16% width */
+    min-width: 150px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+}
+
+.center-column {
+    flex: 2.5; /* Takes 2.5 parts of space, e.g., ~40% width */
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 3; /* Takes 3 parts of space, e.g., ~44% width */
+    min-width: 350px;
+    background-color: #e9ecef;
+    border-left: 1px solid #ddd;
+}
+
+/* Styling the content within the columns */
+h1, h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.prompt-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Form expands to fill available space in the center column */
+}
+
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    flex-grow: 1; /* Textarea expands within the form */
+    min-height: 150px; /* Ensure a decent minimum size */
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; /* Push group to the bottom of center column */
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-grow: 1; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+.clear-btn {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: #dc3545; 
+}
+
+.clear-btn:hover {
+     background-color: #c82333;
+}
+
+.response-area {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    /* This grows to fill the remaining space in the right column */
+    flex-grow: 1; 
+}
+
+ul.request-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.request-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
