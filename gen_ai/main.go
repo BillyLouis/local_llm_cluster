@@ -35,7 +35,6 @@ var tmpl = template.Must(template.New("index.html").Funcs(template.FuncMap{
 }).ParseFiles("templates/index.html"))
 
 func main() {
-	// ... (main function handlers remain the same as before) ...
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 	http.HandleFunc("/", indexHandler)
@@ -54,7 +53,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func askHandler(w http.ResponseWriter, r *http.Request) {
-	// ... (method check and prompt check remain the same) ...
+	// ... (method check and prompt check) ...
 	if r.Method != http.MethodPost {
 		http.Redirect(w, r, "/", http.StatusMethodNotAllowed)
 		return
@@ -67,7 +66,7 @@ func askHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Call Ollama via Command Line
-	// ... (cmd execution logic remains the same) ...
+	// ... (cmd execution logic) ...
 	cmd := exec.Command("ollama", "run", LLMModelName, prompt)
 	var out bytes.Buffer
 	var stderr bytes.Buffer
