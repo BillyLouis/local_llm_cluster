@@ -30,7 +30,7 @@ For LLM Distributed inference over the network.
 - [x] Launch Ollama on one machine
 - [x] Test Run LLMs of 26B parameters and less on one PC
 - [ ] Launch Ollama on all machines
-- [ ] Test Run LLms on all machines seperately
+- [ ] Test Run LLMs on all machines separately
 - [ ] Launch Ray Across All Nodes
 - [ ] Start vLLM with Tensor Parallelism
 - [ ] Run LLM distributed Inference over the network on all machine **ACTING** as one PC 
